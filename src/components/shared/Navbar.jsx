@@ -22,7 +22,7 @@ import { users } from "../../lib/utils";
 
 const MyNavbar = () => {
   return (
-    <Navbar isBordered maxWidth="full" className="px-4 pt-[30px] pb-[15px]">
+    <Navbar isBordered maxWidth="full" className="px-4 pt-[30px] pb-[15px] font-body">
           <NavbarBrand>
             <div className="w-32 sm:w-36 lg:w-fit">
                 <NavLink to="/">

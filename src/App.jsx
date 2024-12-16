@@ -1,14 +1,20 @@
-import './App.css'
-
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+      <main>
+        <Router>
+          {/* <HeaderNavbar /> */}
+          <Routes>
+            {/* <Route path="/" element={<HomePage />} /> */}
+          </Routes>
+          {/* <Footer /> */}
+        </Router>
+      </main>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -7,11 +7,6 @@ import {
   NavbarContent,
   NavbarItem,
   Link,
-  Input,
-  DropdownItem,
-  DropdownTrigger,
-  Dropdown,
-  DropdownMenu,
   Avatar,
   Button,
   Autocomplete,
@@ -71,7 +66,7 @@ const MyNavbar = () => {
                   ],
                 },
               }}
-              placeholder="Enter Restaurant name"
+              placeholder="restaurant, hotel, service....       |   Singapour..."
               className="primary_light text-xs md:text-[16.5px] md:leading-[19.34px]"
               popoverProps={{
                 offset: 10,

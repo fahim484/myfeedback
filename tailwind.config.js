@@ -9,6 +9,14 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#1677BD",
+        secondary: "#1E1E1E",
+        accent: "#232323",
+        primary_light: "#7A7A7A",
+        primary_dark: "#5E5E5E",
+        foreground: "#FFFFFF",
+      },
       fontFamily: {
         heading: ["Lexend", "sans-serif"],
         body: ["Roboto", "sans-serif"],

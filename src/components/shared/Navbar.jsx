@@ -1,4 +1,6 @@
 import { NavLink } from "react-router";
+import { FcGlobe } from "react-icons/fc";
+import { SearchIcon } from "../Icon";
 import {
   Navbar,
   NavbarBrand,
@@ -12,88 +14,133 @@ import {
   DropdownMenu,
   Avatar,
   Button,
+  Autocomplete,
+  AutocompleteItem,
 } from "@nextui-org/react";
+import { users } from "../../lib/utils";
 
 
 
-export const SearchIcon = ({
-  size = 24,
-  strokeWidth = 1.5,
-  width,
-  height,
-  ...props
-}) => {
-  return (
-    <svg
-      aria-hidden="true"
-      fill="none"
-      focusable="false"
-      height={height || size}
-      role="presentation"
-      viewBox="0 0 24 24"
-      width={width || size}
-      {...props}
-    >
-      <path
-        d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d="M22 22L20 20"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={strokeWidth}
-      />
-    </svg>
-  );
-};
+
+
+
 
 const MyNavbar = () => {
   return (
-    <Navbar isBordered>
-
-        <NavbarBrand className="mr-4">
-          <NavLink>
-            <img src="/Img/main-logo.png" alt="" />
-          </NavLink>
-        </NavbarBrand>
-
-        <NavbarContent>
-            <Input
-              classNames={{
-                base: "max-w-full sm:max-w-[750px] h-12", // Adjusted width and height for larger size
-                mainWrapper: "h-full",
-                input: "text-medium w-[]", // Adjusted text size
-                inputWrapper:
-                  "h-full py-4 px-[5px] font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20 rounded-lg", // Added padding and adjusted styles
-              }}
-              placeholder="restaurant, hotel, service...."
-              size="lg" // Increased size (adjust based on design)
-              endContent={
-                <span className="bg-primary rounded-full w-11 h-9 flex items-center justify-center cursor-pointer">
-                  <SearchIcon
-                    className="text-white hover:text-secondary"
-                    size={20} // Increased size of the SearchIcon
+    <Navbar isBordered maxWidth="full" className="px-4 pt-[30px] pb-[15px]">
+          <NavbarBrand>
+            <div className="w-32 sm:w-36 lg:w-fit">
+                <NavLink to="/">
+                  <img
+                    className="w-full max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg mx-auto"
+                    src="/Img/main-logo.png"
+                    alt="Website Main Logo"
                   />
+                </NavLink>
+            </div>
+          </NavbarBrand>
+    
+          <NavbarContent className="hidden md:flex">
+            <Autocomplete
+              aria-label="Select an employee"
+              classNames={{
+                base: "max-w-2xl",
+                listboxWrapper: "max-h-[320px]",
+                selectorButton: "text-default-500",
+              }}
+              defaultItems={users}
+              inputProps={{
+                classNames: {
+                  input: "ml-1",
+                  inputWrapper: "h-[51px] py-4 pe-[23px] ps-[5px]",
+                },
+              }}
+              listboxProps={{
+                hideSelectedIcon: true,
+                itemClasses: {
+                  base: [
+                    "rounded-medium",
+                    "text-default-500",
+                    "transition-opacity",
+                    "data-[hover=true]:text-foreground",
+                    "dark:data-[hover=true]:bg-default-50",
+                    "data-[pressed=true]:opacity-70",
+                    "data-[hover=true]:bg-default-200",
+                    "data-[selectable=true]:focus:bg-default-100",
+                    "data-[focus-visible=true]:ring-default-500",
+                  ],
+                },
+              }}
+              placeholder="Enter Restaurant name"
+              className="primary_light text-xs md:text-[16.5px] md:leading-[19.34px]"
+              popoverProps={{
+                offset: 10,
+                classNames: {
+                  base: "rounded-large",
+                  content: "p-1 border-small border-default-100 bg-background",
+                },
+              }}
+              radius="full"
+              startContent={
+                <span className="bg-primary rounded-full w-11 h-[30px] lg:h-[35px] hidden md:flex items-center justify-center cursor-pointer">
+                    <SearchIcon
+                      className="text-white"
+                      size={20}
+                      strokeWidth={2.5}
+                    />
                 </span>
               }
-              type="search"
-            />
-        </NavbarContent>
-      
+              variant="bordered"
+            >
+              {(item) => (
+                <AutocompleteItem key={item.id} textValue={item.name}>
+                  <div className="flex justify-between items-center">
+                    <div className="flex gap-2 items-center">
+                      <Avatar
+                        alt={item.name}
+                        className="flex-shrink-0 "
+                        size="sm"
+                        src={item.avatar}
+                      />
+                      <div className="flex flex-col">
+                        <span className="text-secondary text-xs sm:text-base md:text-[19px] md:leading-[22.27px] font-body">{item.name}</span>
+                      </div>
+                    </div>
+                    <Button
+                      className="border-small mr-0.5 font-medium shadow-small font-body"
+                      radius="full"
+                      size="sm"
+                      variant="bordered"
+                    >
+                      Add
+                    </Button>
+                  </div>
+                </AutocompleteItem>
+              )}
+            </Autocomplete>
+          </NavbarContent>
 
-        <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
+      <NavbarContent justify="end" >
+        <NavbarItem className="hidden sm:flex">
+          <NavLink to="#">
+            <FcGlobe size={35} />
+          </NavLink>
         </NavbarItem>
+
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-          MyFeedback for business
-          </Button>
+          <NavLink to="#">
+            <Button
+              as={Link}
+              size="md"
+              color="primary"
+              radius="full"
+              href="#"
+              variant="flat"
+              className="bg-secondary text-white text-[15.5px] leading-[18.16px]"
+            >
+              MyFeedback for business
+            </Button>
+          </NavLink>
         </NavbarItem>
       </NavbarContent>
     </Navbar>

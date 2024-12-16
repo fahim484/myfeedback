@@ -15,7 +15,11 @@ export default {
         accent: "#232323",
         primary_light: "#7A7A7A",
         primary_dark: "#5E5E5E",
-        foreground: "#FFFFFF",
+        secondary_light: "#595959",
+        secondary_dark: "#D9D9D9",
+        accent_light: "#EDEDED",
+        accent_dark: "#D3D3D3",
+        main_bg: "#FFFFFF",
       },
       fontFamily: {
         heading: ["Lexend", "sans-serif"],

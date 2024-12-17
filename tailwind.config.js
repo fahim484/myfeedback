@@ -17,7 +17,7 @@ export default {
         primary_dark: "#5E5E5E",
         secondary_light: "#595959",
         secondary_dark: "#D9D9D9",
-        accent_light: "#EDEDED",
+        accent_light: "#AFAFAF",
         accent_dark: "#D3D3D3",
         main_bg: "#FFFFFF",
       },

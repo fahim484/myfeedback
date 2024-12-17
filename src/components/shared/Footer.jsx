@@ -79,7 +79,7 @@ const footerData = {
 
 const MenuSection = ({ title, menus = [] }) => {
     return (
-        <div className="flex flex-row md:flex-col items-start gap-4 p-5 md:p-0">
+        <div className="flex flex-col items-start gap-4 p-5 md:p-0">
             {menus.map((menu, index) => (
                 <ul key={index}>
                     <p className="text-secondary font-heading font-extrabold text-xl leading-[25px] mb-[11px]">

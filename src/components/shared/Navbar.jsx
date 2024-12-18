@@ -46,7 +46,7 @@ const MyNavbar = () => {
               defaultItems={users}
               inputProps={{
                 classNames: {
-                  input: "ml-1",
+                  input: "ml-1 border-none outline-none !ring-0",
                   inputWrapper: "h-[51px] py-4 pe-[23px] ps-[5px]",
                 },
               }}
@@ -89,7 +89,7 @@ const MyNavbar = () => {
             >
               {(item) => (
                 <AutocompleteItem key={item.id} textValue={item.name}>
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-between items-center border-b-[0.75px] border-accent_dark_2 pb-[15px]">
                     <div className="flex gap-2 items-center">
                       <Avatar
                         alt={item.name}

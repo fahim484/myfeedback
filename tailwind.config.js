@@ -1,4 +1,5 @@
-const {nextui} = require("@nextui-org/react");
+const flowbite = require("flowbite-react/tailwind");
+const { nextui } = require("@nextui-org/react");
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -6,6 +7,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+    flowbite.content(),
   ],
   theme: {
     extend: {
@@ -18,7 +20,9 @@ export default {
         secondary_light: "#595959",
         secondary_dark: "#D9D9D9",
         accent_light: "#AFAFAF",
-        accent_dark: "#D3D3D3",
+        accent_dark: "#8F8F8F",
+        accent_light_2: "#F8F8F8",
+        accent_dark_2: "#969696",
         main_bg: "#FFFFFF",
       },
       fontFamily: {
@@ -28,6 +32,5 @@ export default {
     },
   },
   darkMode: "class",
-  plugins: [nextui()],
-}
-
+  plugins: [nextui(), flowbite.plugin()],
+};

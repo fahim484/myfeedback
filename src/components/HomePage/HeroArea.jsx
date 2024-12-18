@@ -10,10 +10,11 @@ import { LiaTheaterMasksSolid } from "react-icons/lia";
 import { TbWashGentle } from "react-icons/tb";
 import { RiBeerLine } from "react-icons/ri";
 import { CiDumbbell } from "react-icons/ci";
+import { MdStars } from "react-icons/md";
+
 
 import { NavLink } from "react-router-dom";
-import { link } from "@nextui-org/react";
-import Carousel from "../common/Carousel";
+import MyCarousel from "../common/Carousel";
 
 const headerData = [
   {
@@ -142,16 +143,27 @@ const HeroArea = () => {
   return (
     <section>
       {/* Header section */}
-      <section className="pt-[42px] pb-16 container mx-auto px-4">
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-[67px]">
+      <section className="pt-[42px] pb-16 container mx-auto px-4 lg:px-0">
+        <div className="flex flex-wrap items-center justify-evenly md:justify-between gap-8 md:gap-[67px]">
           {headerData.map((item) => (
             <div
               key={item.id}
               className="flex flex-col items-center gap-2 cursor-pointer"
             >
-              <NavLink to={item.link}  className={({ isActive }) => `flex flex-col flex-1 w-full items-center gap-3 pb-3 ${isActive ? 'border-b-1 border-primary text-primary' : 'text-accent_light'}`}>
+              <NavLink
+                to={item.link}
+                className={({ isActive }) =>
+                  `flex flex-col flex-1 w-full items-center gap-3 pb-3 ${
+                    isActive
+                      ? "border-b-1 border-primary text-primary"
+                      : "text-accent_light"
+                  }`
+                }
+              >
                 <span className="text-3xl w-auto">{item.logo}</span>
-                <p className="text-sm font-body md:text-[15.5px] md:leading-[18.16px]">{item.title}</p>
+                <p className="text-sm font-body md:text-[15.5px] md:leading-[18.16px]">
+                  {item.title}
+                </p>
               </NavLink>
             </div>
           ))}
@@ -160,9 +172,7 @@ const HeroArea = () => {
 
       {/* Hero section */}
       <section>
-        <div>
-            <Carousel data={CarouselData} tags={TagData} />
-        </div>
+        <MyCarousel data={CarouselData} />
       </section>
     </section>
   );
@@ -170,49 +180,150 @@ const HeroArea = () => {
 
 export default HeroArea;
 
-
 const CarouselData = [
-    {
-      id: 1,
-      image: "Img/drink/DrinkCarousel.png",
-      heading:
-        "GTCO Food and Drink Festival 2022: Africa’s Biggest Food and Drink Festival",
-      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-    },
-    {
-      id: 2,
-      image: "Img/slider.png",
-      heading: "Hablu Programmer Is The Best",
-      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-    },
-    {
-      id: 3,
-      image: "Img/drink/DrinkCarousel.png",
-      heading: "We Learning Full Stack Web Development",
-      des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
-    },
-  ];
-  
-  const TagData = [
-    {
-      id: 1,
-      img: "Img/Calendar.png",
-      title: "Dec 12 2024",
-    },
-    {
-      id: 2,
-      img: "Img/Mark.png",
-      title: "TBS  Lagos",
-    },
-    {
-      id: 3,
-      img: "Img/Clock.png",
-      title: "9:00 PM",
-    },
-    {
-      id: 4,
-      img: "Img/Tag.png",
-      title: "N20,000",
-    },
-  ];
-  
+  {
+    items: [
+      {
+        id: 1,
+        image: ["Img/Carousel/carousel-card-img-1.png", "Img/Carousel/carousel-card-img-2.png", "Img/Carousel/carousel-card-img-3.png", "Img/Carousel/carousel-card-img-4.png"],
+        title: "Bottega",
+        des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+        star: (
+          <>
+            <MdStars />
+            <MdStars />
+            <MdStars />
+            <MdStars />
+            <MdStars />
+          </>
+        ),
+        rating: "5.0",
+        review: "(876 reviews)",
+      },
+      {
+        id: 2,
+        image: ["Img/Carousel/carousel-card-img-2.png", "Img/Carousel/carousel-card-img-1.png", "Img/Carousel/carousel-card-img-3.png", "Img/Carousel/carousel-card-img-4.png"],
+        title: "Bottega",
+        des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+        star: (
+          <>
+            <MdStars />
+            <MdStars />
+            <MdStars />
+            <MdStars />
+            <MdStars />
+          </>
+        ),
+        rating: "5.0",
+        review: "(876 reviews)",
+      },
+      {
+        id: 3,
+        image: ["Img/Carousel/carousel-card-img-3.png", "Img/Carousel/carousel-card-img-1.png", "Img/Carousel/carousel-card-img-2.png",  "Img/Carousel/carousel-card-img-4.png"],
+        title: "Bottega",
+        des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+        star: (
+          <>
+            <MdStars />
+            <MdStars />
+            <MdStars />
+            <MdStars />
+            <MdStars />
+          </>
+        ),
+        rating: "5.0",
+        review: "(876 reviews)",
+      },
+      {
+        id: 4,
+        image: ["Img/Carousel/carousel-card-img-4.png", "Img/Carousel/carousel-card-img-1.png", "Img/Carousel/carousel-card-img-2.png", "Img/Carousel/carousel-card-img-3.png"],
+        title: "Bottega",
+        des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+        star: (
+          <>
+            <MdStars />
+            <MdStars />
+            <MdStars />
+            <MdStars />
+            <MdStars />
+          </>
+        ),
+        rating: "5.0",
+        review: "(876 reviews)",
+      },
+    ],
+  },
+
+  {
+    items: [
+      {
+        id: 5,
+        image: ["Img/Carousel/carousel-card-img-5.png", "Img/Carousel/carousel-card-img-6.png", "Img/Carousel/carousel-card-img-7.png", "Img/Carousel/carousel-card-img-8.png"],
+        title: "Bottega",
+        des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+        star: (
+          <>
+            <MdStars />
+            <MdStars />
+            <MdStars />
+            <MdStars />
+            <MdStars />
+          </>
+        ),
+        rating: "5.0",
+        review: "(876 reviews)",
+      },
+      {
+        id: 6,
+        image: ["Img/Carousel/carousel-card-img-6.png", "Img/Carousel/carousel-card-img-5.png", "Img/Carousel/carousel-card-img-7.png", "Img/Carousel/carousel-card-img-8.png"],
+        title: "Bottega",
+        des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+        star: (
+          <>
+            <MdStars />
+            <MdStars />
+            <MdStars />
+            <MdStars />
+            <MdStars />
+          </>
+        ),
+        rating: "5.0",
+        review: "(876 reviews)",
+      },
+      {
+        id: 7,
+        image: ["Img/Carousel/carousel-card-img-7.png", "Img/Carousel/carousel-card-img-5.png", "Img/Carousel/carousel-card-img-6.png", "Img/Carousel/carousel-card-img-8.png"],
+        title: "Bottega",
+        des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+        star: (
+          <>
+            <MdStars />
+            <MdStars />
+            <MdStars />
+            <MdStars />
+            <MdStars />
+          </>
+        ),
+        rating: "5.0",
+        review: "(876 reviews)",
+      },
+      {
+        id: 8,
+        image: ["Img/Carousel/carousel-card-img-8.png", "Img/Carousel/carousel-card-img-5.png", "Img/Carousel/carousel-card-img-6.png", "Img/Carousel/carousel-card-img-7.png"],
+        title: "Bottega",
+        des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
+        star: (
+          <>
+            <MdStars />
+            <MdStars />
+            <MdStars />
+            <MdStars />
+            <MdStars />
+          </>
+        ),
+        rating: "5.0",
+        review: "(876 reviews)",
+      },
+    ],
+  },
+];

@@ -122,7 +122,7 @@ const Footer = () => {
 
                 {/* Add logo and copyright center aligned */}
 
-                <div className="text-sm leading-[16.41px] font-semibold font-body text-secondary my-5 md:mt-10 md:mb-[58px]">
+                <div className="text-xs sm:text-sm sm:leading-[16.41px] font-semibold font-body text-secondary my-5 md:mt-10 md:mb-[58px] px-5 md:px-0">
                     {copyright}
                 </div>
             </div>

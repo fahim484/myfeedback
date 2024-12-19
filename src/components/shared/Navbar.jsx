@@ -22,9 +22,9 @@ import { users } from "../../lib/utils";
 
 const MyNavbar = () => {
   return (
-    <Navbar isBordered maxWidth="full" className="px-4 pt-[30px] pb-[15px] font-body">
+    <Navbar isBordered maxWidth="full" className="sm:px-4 sm:pt-[30px] sm:pb-[15px] font-body">
           <NavbarBrand>
-            <div className="w-32 sm:w-36 lg:w-fit">
+            <div className="w-24 sm:w-36 lg:w-fit">
                 <NavLink to="/">
                   <img
                     className="w-full max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg mx-auto"
@@ -125,13 +125,10 @@ const MyNavbar = () => {
         <NavbarItem>
           <NavLink to="#">
             <Button
-              as={Link}
-              size="md"
               color="primary"
               radius="full"
-              href="#"
               variant="flat"
-              className="bg-secondary text-white text-[15.5px] leading-[18.16px]"
+              className="bg-secondary text-white text-xs sm:text-[15.5px] sm:leading-[18.16px]"
             >
               MyFeedback for business
             </Button>

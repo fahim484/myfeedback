@@ -1,5 +1,6 @@
 import { MdStars } from "react-icons/md";
 import { Carousel } from "flowbite-react";
+import { Button } from "@nextui-org/react";
 
 const trendsData = [
   {
@@ -206,7 +207,7 @@ const Trends = () => {
           {trendsData.map((section, id) => (
             <div
               key={id}
-              className="h-[1650px] sm:h-[800px] lg:h-[785px] xl:h-[400px] "
+              className="h-[1620px] sm:h-[800px] lg:h-[785px] xl:h-[400px] "
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
                 {section.items?.map((item, idx) => (
@@ -250,6 +251,12 @@ const Trends = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* More Section */}
+      <div className="text-center mt-[52px]">
+        <h4 className="text-secondary font-heading text-base sm:text-[22px] sm:leading-[27.5px]   pb-5">Discover more cool restaurants</h4>
+        <Button radius="full" size="lg" className="bg-primary font-body text-white text-base sm:text-[19px] sm:leading-[22.27px]">Show more</Button>
       </div>
     </section>
   );

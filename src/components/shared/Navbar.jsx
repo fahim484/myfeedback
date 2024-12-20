@@ -6,7 +6,6 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
   Avatar,
   Button,
   Autocomplete,
@@ -128,7 +127,7 @@ const MyNavbar = () => {
               color="primary"
               radius="full"
               variant="flat"
-              className="bg-secondary text-white text-xs sm:text-[15.5px] sm:leading-[18.16px]"
+              className="bg-secondary text-white text-[10px] sm:text-[15.5px] sm:leading-[18.16px]"
             >
               MyFeedback for business
             </Button>

@@ -23,6 +23,8 @@ export default {
         accent_dark: "#8F8F8F",
         accent_light_2: "#F8F8F8",
         accent_dark_2: "#969696",
+        accent_light_3: "#F2F2F2",
+        accent_dark_3: "#EDEDED",
         main_bg: "#FFFFFF",
       },
       fontFamily: {

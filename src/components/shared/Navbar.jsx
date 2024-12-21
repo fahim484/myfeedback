@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 import { FcGlobe } from "react-icons/fc";
 import { SearchIcon } from "../Icon";
 import {
@@ -20,6 +20,7 @@ import { users } from "../../lib/utils";
 
 
 const MyNavbar = () => {
+  const navigate = useNavigate();
   return (
     <Navbar isBordered maxWidth="full" className="sm:px-4 sm:pt-[30px] sm:pb-[15px] font-body">
           <NavbarBrand>
@@ -65,7 +66,7 @@ const MyNavbar = () => {
                   ],
                 },
               }}
-              placeholder="restaurant, hotel, service....       |   Singapour..."
+              placeholder="restaurant, hotel, service....       |   Singapore..."
               className="primary_light text-xs md:text-[16.5px] md:leading-[19.34px]"
               popoverProps={{
                 offset: 10,
@@ -87,7 +88,7 @@ const MyNavbar = () => {
               variant="bordered"
             >
               {(item) => (
-                <AutocompleteItem key={item.id} textValue={item.name}>
+                <AutocompleteItem key={item.id} textValue={item.name} onClick={() => navigate(`/search/${item.id}`)}>
                   <div className="flex justify-between items-center border-b-[0.75px] border-accent_dark_2 pb-[15px]">
                     <div className="flex gap-2 items-center">
                       <Avatar

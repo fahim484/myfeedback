@@ -185,7 +185,7 @@ const CarouselData = [
     items: [
       {
         id: 1,
-        image: ["Img/Carousel/carousel-card-img-1.png", "Img/Carousel/carousel-card-img-2.png", "Img/Carousel/carousel-card-img-3.png", "Img/Carousel/carousel-card-img-4.png"],
+        image: ["Img/common/Carousel/carousel-card-img-1.png", "Img/common/Carousel/carousel-card-img-2.png", "Img/common/Carousel/carousel-card-img-3.png", "Img/common/Carousel/carousel-card-img-4.png"],
         title: "Bottega",
         des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
         star: (
@@ -202,7 +202,7 @@ const CarouselData = [
       },
       {
         id: 2,
-        image: ["Img/Carousel/carousel-card-img-2.png", "Img/Carousel/carousel-card-img-1.png", "Img/Carousel/carousel-card-img-3.png", "Img/Carousel/carousel-card-img-4.png"],
+        image: ["Img/common/Carousel/carousel-card-img-2.png", "Img/common/Carousel/carousel-card-img-1.png", "Img/common/Carousel/carousel-card-img-3.png", "Img/common/Carousel/carousel-card-img-4.png"],
         title: "Bottega",
         des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
         star: (
@@ -219,7 +219,7 @@ const CarouselData = [
       },
       {
         id: 3,
-        image: ["Img/Carousel/carousel-card-img-3.png", "Img/Carousel/carousel-card-img-1.png", "Img/Carousel/carousel-card-img-2.png",  "Img/Carousel/carousel-card-img-4.png"],
+        image: ["Img/common/Carousel/carousel-card-img-3.png", "Img/common/Carousel/carousel-card-img-1.png", "Img/common/Carousel/carousel-card-img-2.png",  "Img/common/Carousel/carousel-card-img-4.png"],
         title: "Bottega",
         des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
         star: (
@@ -236,7 +236,7 @@ const CarouselData = [
       },
       {
         id: 4,
-        image: ["Img/Carousel/carousel-card-img-4.png", "Img/Carousel/carousel-card-img-1.png", "Img/Carousel/carousel-card-img-2.png", "Img/Carousel/carousel-card-img-3.png"],
+        image: ["Img/common/Carousel/carousel-card-img-4.png", "Img/common/Carousel/carousel-card-img-1.png", "Img/common/Carousel/carousel-card-img-2.png", "Img/common/Carousel/carousel-card-img-3.png"],
         title: "Bottega",
         des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
         star: (
@@ -258,7 +258,7 @@ const CarouselData = [
     items: [
       {
         id: 5,
-        image: ["Img/Carousel/carousel-card-img-5.png", "Img/Carousel/carousel-card-img-6.png", "Img/Carousel/carousel-card-img-7.png", "Img/Carousel/carousel-card-img-8.png"],
+        image: ["Img/common/Carousel/carousel-card-img-5.png", "Img/common/Carousel/carousel-card-img-6.png", "Img/common/Carousel/carousel-card-img-7.png", "Img/common/Carousel/carousel-card-img-8.png"],
         title: "Bottega",
         des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
         star: (
@@ -275,7 +275,7 @@ const CarouselData = [
       },
       {
         id: 6,
-        image: ["Img/Carousel/carousel-card-img-6.png", "Img/Carousel/carousel-card-img-5.png", "Img/Carousel/carousel-card-img-7.png", "Img/Carousel/carousel-card-img-8.png"],
+        image: ["Img/common/Carousel/carousel-card-img-6.png", "Img/common/Carousel/carousel-card-img-5.png", "Img/common/Carousel/carousel-card-img-7.png", "Img/common/Carousel/carousel-card-img-8.png"],
         title: "Bottega",
         des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
         star: (
@@ -292,7 +292,7 @@ const CarouselData = [
       },
       {
         id: 7,
-        image: ["Img/Carousel/carousel-card-img-7.png", "Img/Carousel/carousel-card-img-5.png", "Img/Carousel/carousel-card-img-6.png", "Img/Carousel/carousel-card-img-8.png"],
+        image: ["Img/common/Carousel/carousel-card-img-7.png", "Img/common/Carousel/carousel-card-img-5.png", "Img/common/Carousel/carousel-card-img-6.png", "Img/common/Carousel/carousel-card-img-8.png"],
         title: "Bottega",
         des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
         star: (
@@ -309,7 +309,7 @@ const CarouselData = [
       },
       {
         id: 8,
-        image: ["Img/Carousel/carousel-card-img-8.png", "Img/Carousel/carousel-card-img-5.png", "Img/Carousel/carousel-card-img-6.png", "Img/Carousel/carousel-card-img-7.png"],
+        image: ["Img/common/Carousel/carousel-card-img-8.png", "Img/common/Carousel/carousel-card-img-5.png", "Img/common/Carousel/carousel-card-img-6.png", "Img/common/Carousel/carousel-card-img-7.png"],
         title: "Bottega",
         des: "The lorem ipsum is, in printing, a series of meaningless words used temporarily to calibrate a layout.",
         star: (

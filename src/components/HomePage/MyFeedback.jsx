@@ -30,7 +30,7 @@ const MyFeedback = () => {
 
           {/* Right section */}
           <div>
-            <img className="w-full" src="/Img/MyFeedback/myfeedback-img.png" alt="" />
+            <img className="w-full" src="/Img/HomePage/MyFeedback/myfeedback-img.png" alt="" />
           </div>
         </div>
       </div>

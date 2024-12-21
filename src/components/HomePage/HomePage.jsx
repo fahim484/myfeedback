@@ -1,5 +1,6 @@
 import HeroArea from "./HeroArea";
 import MyFeedback from "./MyFeedback";
+import Reviews from "./Reviews";
 import Trends from "./Trends";
 
 const HomePage = () => {
@@ -8,6 +9,7 @@ const HomePage = () => {
       <HeroArea />
       <Trends />
       <MyFeedback />
+      <Reviews />
     </>
   );
 };

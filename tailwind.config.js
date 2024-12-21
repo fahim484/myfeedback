@@ -24,7 +24,9 @@ export default {
         accent_light_2: "#F8F8F8",
         accent_dark_2: "#969696",
         accent_light_3: "#F2F2F2",
-        accent_dark_3: "#EDEDED",
+        accent_dark_3: "#8A8A8A",
+        accent_light_4: "#343434",
+        accent_light_5: "#DCDCDC",
         main_bg: "#FFFFFF",
       },
       fontFamily: {
